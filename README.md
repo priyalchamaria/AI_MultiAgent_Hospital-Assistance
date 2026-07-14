@@ -122,16 +122,10 @@ http://localhost:8501
 
 The repository already includes the prepared dataset, SQLite database, policy documents, and policy index. Evaluators do not need to run this step for normal use.
 
-If you want to rebuild the database and RAG index from the original archive, run:
+If you want to rebuild the database and RAG index from the CSV included in this repository, run:
 
 ```powershell
-python scripts\prepare_data.py --archive "C:\path\to\archive (1).zip"
-```
-
-If the CSV is already extracted, use:
-
-```powershell
-python scripts\prepare_data.py --csv "C:\path\to\healthcare_dataset.csv"
+python scripts\prepare_data.py --csv data\healthcare_dataset.csv
 ```
 
 ## Demo Questions
