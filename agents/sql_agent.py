@@ -86,6 +86,7 @@ class SQLAgent:
 
     def execute_sql(self, sql: str, params: tuple[Any, ...] = ()) -> pd.DataFrame:
         self.validate_sql(sql)
+        sql = self.validator.enforce_limit(sql)
         return execute_read_query(sql, params=params, db_path=self.db_path)
 
     def format_result(self, query: str, result: pd.DataFrame) -> str:

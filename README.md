@@ -11,13 +11,19 @@ The system demonstrates a practical multi-agent workflow where an Orchestrator A
 
 All data and policies are synthetic and used only for academic/internship demonstration.
 
+## Implementation Notes
+
+- The SQL Agent is a **rule-based, schema-aware NLP-to-SQL agent** with controlled SQL generation for supported query patterns.
+- The RAG Agent is a **lightweight local RAG pipeline** using TF-IDF retrieval and grounded extractive answer generation.
+- The project does not require OpenAI API keys, external LLM services, or cloud-hosted vector databases.
+
 ## Key Features
 
 - Streamlit-based professional dashboard
 - Synthetic healthcare CSV converted into SQLite
 - Data cleaning, date conversion, duplicate removal, missing-value checks
 - Patient ID generation and database indexing
-- NLP-to-SQL query generation with read-only SQL validation
+- Controlled NLP-to-SQL query generation with read-only SQL validation
 - RAG pipeline over 10 synthetic hospital policy documents
 - Orchestrator Agent with SQL, RAG, both-agent, and unsupported routes
 - Source citations for policy answers
@@ -25,50 +31,53 @@ All data and policies are synthetic and used only for academic/internship demons
 - Feedback buttons for each answer
 - Query logs and validation metrics
 - Automated tests for agents and SQL safety
+- GitHub Actions workflow for automated test execution
 
 ## Tech Stack
 
 - Python
+- Streamlit
 - SQLite
 - Pandas
 - Scikit-learn
-- Pytest
+- Pytest for automated testing
 
 ## Project Structure
 
 ```text
-DS_intern/
-├── app.py
-├── requirements.txt
-├── README.md
-├── data/
-│   ├── healthcare_dataset.csv
-│   ├── hospital.db
-│   ├── policy_index.pkl
-│   └── policies/
-├── agents/
-│   ├── orchestrator_agent.py
-│   ├── sql_agent.py
-│   └── rag_agent.py
-├── database/
-│   ├── create_database.py
-│   ├── schema.py
-│   └── db_utils.py
-├── rag/
-│   ├── document_loader.py
-│   ├── chunker.py
-│   ├── embeddings.py
-│   └── vector_store.py
-├── services/
-│   ├── query_classifier.py
-│   ├── sql_validator.py
-│   ├── response_formatter.py
-│   └── logger.py
-├── frontend/
-│   └── ui.py
-├── tests/
-├── evaluation/
-└── docs/
+AI_MultiAgent_Hospital-Assistance/
+|-- app.py
+|-- requirements.txt
+|-- requirements-dev.txt
+|-- README.md
+|-- data/
+|   |-- healthcare_dataset.csv
+|   |-- hospital.db
+|   |-- policy_index.pkl
+|   `-- policies/
+|-- agents/
+|   |-- orchestrator_agent.py
+|   |-- sql_agent.py
+|   `-- rag_agent.py
+|-- database/
+|   |-- create_database.py
+|   |-- schema.py
+|   `-- db_utils.py
+|-- rag/
+|   |-- document_loader.py
+|   |-- chunker.py
+|   |-- embeddings.py
+|   `-- vector_store.py
+|-- services/
+|   |-- query_classifier.py
+|   |-- sql_validator.py
+|   |-- response_formatter.py
+|   `-- logger.py
+|-- frontend/
+|   `-- ui.py
+|-- tests/
+|-- evaluation/
+`-- docs/
 ```
 
 ## Architecture
@@ -100,7 +109,7 @@ git clone https://github.com/priyalchamaria/AI_MultiAgent_Hospital-Assistance.gi
 cd AI_MultiAgent_Hospital-Assistance
 ```
 
-2. Install dependencies:
+2. Install runtime dependencies:
 
 ```powershell
 pip install -r requirements.txt
@@ -125,7 +134,7 @@ The repository already includes the prepared dataset, SQLite database, policy do
 If you want to rebuild the database and RAG index from the CSV included in this repository, run:
 
 ```powershell
-python scripts\prepare_data.py --csv data\healthcare_dataset.csv
+python scripts/prepare_data.py --csv data/healthcare_dataset.csv
 ```
 
 ## Demo Questions
@@ -155,9 +164,10 @@ Unsupported:
 
 ## Testing
 
-Run the automated test suite:
+Install development dependencies and run the automated test suite:
 
 ```powershell
+pip install -r requirements-dev.txt
 python -m pytest
 ```
 
@@ -166,7 +176,7 @@ python -m pytest
 Run the evaluation script:
 
 ```powershell
-python evaluation\evaluate_system.py
+python evaluation/evaluate_system.py
 ```
 
 The evaluation writes:

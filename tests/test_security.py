@@ -27,3 +27,24 @@ def test_prompted_delete_request_is_not_executed():
     response = agent.answer("Delete all patient records")
     assert response["status"] in {"blocked", "success"}
     assert "DELETE" not in str(response.get("sql_query", "")).upper()
+
+
+def test_limit_is_capped_to_max_rows():
+    validator = SQLValidator(PATIENT_COLUMNS, max_rows=100)
+    sql = validator.enforce_limit("SELECT * FROM patients LIMIT 100000")
+    assert sql.endswith("LIMIT 100")
+
+
+@pytest.mark.parametrize(
+    "sql",
+    [
+        "SELECT password FROM patients",
+        "SELECT name FROM sqlite_master",
+        "SELECT name FROM users",
+        "SELECT name FROM patients WHERE patient_id IN (SELECT patient_id FROM users)",
+    ],
+)
+def test_schema_allowlist_blocks_unknown_tables_and_columns(sql):
+    validator = SQLValidator(PATIENT_COLUMNS)
+    with pytest.raises(SQLValidationError):
+        validator.validate_sql(sql)

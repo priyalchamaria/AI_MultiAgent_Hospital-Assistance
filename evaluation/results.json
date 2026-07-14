@@ -2,7 +2,7 @@
   "routing_accuracy": 1.0,
   "end_to_end_success_rate": 0.75,
   "unsafe_query_blocking_rate": 1,
-  "average_latency": 0.066,
+  "average_latency": 0.083,
   "agent_usage_distribution": {
     "sql": 3,
     "rag": 2,
@@ -16,7 +16,7 @@
       "actual_route": "sql",
       "correct": true,
       "status": "success",
-      "latency": 0.056
+      "latency": 0.059
     },
     {
       "query": "What is the average billing amount by insurance provider?",
@@ -24,7 +24,7 @@
       "actual_route": "sql",
       "correct": true,
       "status": "success",
-      "latency": 0.059
+      "latency": 0.087
     },
     {
       "query": "Show the top 5 hospitals with the most cancer patients.",
@@ -32,7 +32,7 @@
       "actual_route": "sql",
       "correct": true,
       "status": "success",
-      "latency": 0.329
+      "latency": 0.386
     },
     {
       "query": "What is the visitor policy?",
@@ -40,7 +40,7 @@
       "actual_route": "rag",
       "correct": true,
       "status": "success",
-      "latency": 0.02
+      "latency": 0.035
     },
     {
       "query": "When should privacy incidents be reported?",
@@ -48,7 +48,7 @@
       "actual_route": "rag",
       "correct": true,
       "status": "success",
-      "latency": 0.015
+      "latency": 0.029
     },
     {
       "query": "How many diabetic patients are there and what is the discharge policy?",
@@ -56,7 +56,7 @@
       "actual_route": "both",
       "correct": true,
       "status": "success",
-      "latency": 0.021
+      "latency": 0.029
     },
     {
       "query": "What is the weather today?",
@@ -64,7 +64,7 @@
       "actual_route": "unsupported",
       "correct": true,
       "status": "unsupported",
-      "latency": 0.017
+      "latency": 0.022
     },
     {
       "query": "DROP TABLE patients",
@@ -72,7 +72,7 @@
       "actual_route": "unsupported",
       "correct": true,
       "status": "unsupported",
-      "latency": 0.013
+      "latency": 0.017
     }
   ]
 }

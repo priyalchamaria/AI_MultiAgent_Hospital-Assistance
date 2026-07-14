@@ -2,7 +2,7 @@
 
 ## 1. Abstract
 
-CareBridge AI is an AI-powered multi-agent application that allows hospital staff to query synthetic patient records and generated hospital policy documents using plain English. The application uses an Orchestrator Agent to classify every incoming query and route it to either an NLP-to-SQL Agent for structured patient-data questions or a RAG Agent for unstructured policy-document questions. The project demonstrates how structured and unstructured hospital knowledge can be made accessible through one conversational interface.
+CareBridge AI is an AI-powered multi-agent application that allows hospital staff to query synthetic patient records and generated hospital policy documents using plain English. The application uses an Orchestrator Agent to classify every incoming query and route it to the SQL Agent, RAG Agent, both agents for mixed questions, or an unsupported-query response. The project demonstrates how structured and unstructured hospital knowledge can be made accessible through one conversational interface.
 
 ## 2. Problem Statement
 
@@ -31,10 +31,12 @@ The unstructured data is a generated set of hospital policy documents covering p
 
 ### Orchestrator Agent
 
-The Orchestrator Agent inspects the incoming query and assigns it to one of two routes:
+The Orchestrator Agent inspects the incoming query and assigns it to one of four routes:
 
 - `SQL`: for aggregation, counting, ranking, filtering, and patient-record analysis.
 - `RAG`: for policies, procedures, compliance, documentation, escalation, and operational guidance.
+- `BOTH`: for mixed questions that need both patient data and policy guidance.
+- `UNSUPPORTED`: for out-of-scope or unsafe questions.
 
 The agent returns the route, confidence score, and a short reason. This makes the system explainable during demonstration.
 
@@ -52,7 +54,7 @@ The generated SQL is shown in the interface for transparency.
 
 ### RAG Agent
 
-The RAG agent loads local policy documents, splits them into chunks, creates TF-IDF embeddings, and retrieves the most similar chunks for a question. It returns a concise answer and source citations.
+The RAG agent loads local policy documents, splits them into chunks, creates local TF-IDF vectors, and retrieves the most similar chunks for a question. It returns a concise extractive answer and source citations.
 
 ## 6. Technology Stack
 

@@ -55,6 +55,17 @@ class RAGAgent:
         start = time.perf_counter()
         chunks = self.retrieve(query, top_k=10)
         retrieval_ok = bool(chunks) and max(float(chunk.get("score", 0)) for chunk in chunks) >= 0.08
+        if not retrieval_ok:
+            return unified_response(
+                query=query,
+                selected_agent="RAG Agent",
+                answer="I could not find a grounded answer in the synthetic hospital policy documents.",
+                sources=[],
+                confidence=confidence,
+                start_time=start,
+                status="not_found",
+                route_reason=route_reason,
+            )
         selected = self._select_best_chunk(query, chunks) if chunks else None
         answer = self._answer_from_chunk(selected) if selected else self.generate_answer(query, chunks)
         if selected:
@@ -63,7 +74,6 @@ class RAGAgent:
                 for chunk in chunks
                 if not (chunk.get("source") == selected.get("source") and chunk.get("section") == selected.get("section"))
             ]
-        status = "success" if retrieval_ok and selected else "not_found"
         return unified_response(
             query=query,
             selected_agent="RAG Agent",
@@ -71,7 +81,7 @@ class RAGAgent:
             sources=chunks,
             confidence=confidence,
             start_time=start,
-            status=status,
+            status="success",
             route_reason=route_reason,
         )
 
