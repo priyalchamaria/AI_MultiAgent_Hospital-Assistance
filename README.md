@@ -106,7 +106,23 @@ cd AI_MultiAgent_Hospital-Assistance
 pip install -r requirements.txt
 ```
 
-3. Prepare the data:
+3. Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+4. Open the browser:
+
+```text
+http://localhost:8501
+```
+
+## Optional: Rebuild the Data
+
+The repository already includes the prepared dataset, SQLite database, policy documents, and policy index. Evaluators do not need to run this step for normal use.
+
+If you want to rebuild the database and RAG index from the original archive, run:
 
 ```powershell
 python scripts\prepare_data.py --archive "C:\path\to\archive (1).zip"
@@ -116,18 +132,6 @@ If the CSV is already extracted, use:
 
 ```powershell
 python scripts\prepare_data.py --csv "C:\path\to\healthcare_dataset.csv"
-```
-
-4. Start the app:
-
-```powershell
-python -m streamlit run app.py
-```
-
-5. Open the browser:
-
-```text
-http://localhost:8501
 ```
 
 ## Demo Questions
