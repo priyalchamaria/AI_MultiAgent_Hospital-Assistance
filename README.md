@@ -2,34 +2,37 @@
 
 CareBridge AI is an AI-powered multi-agent application that lets hospital staff ask plain-English questions about synthetic patient records and synthetic hospital policy documents.
 
-It uses:
+The system demonstrates a practical multi-agent workflow where an Orchestrator Agent routes each query to the correct specialist:
 
-- **Orchestrator Agent** for query classification and routing.
-- **SQL Agent** for structured patient-record analysis.
-- **RAG Agent** for policy-document retrieval with source citations.
-- **SQL safety layer** to block unsafe database operations.
-- **Streamlit UI** for a clean evaluator-friendly demo.
+- **SQL Agent** for structured patient-record questions.
+- **RAG Agent** for hospital policy-document questions.
+- **Both Agents** for mixed questions involving data and policy.
+- **Unsupported route** for out-of-scope or unsafe questions.
 
 All data and policies are synthetic and used only for academic/internship demonstration.
 
-## Why Streamlit?
+## Key Features
 
-For internship submission, Streamlit is the best choice here. It is easy for an evaluator to run, needs no separate frontend/backend setup, shows tables and metrics naturally, and makes the multi-agent workflow visible in one browser page.
+- Streamlit-based professional dashboard
+- Synthetic healthcare CSV converted into SQLite
+- Data cleaning, date conversion, duplicate removal, missing-value checks
+- Patient ID generation and database indexing
+- NLP-to-SQL query generation with read-only SQL validation
+- RAG pipeline over 10 synthetic hospital policy documents
+- Orchestrator Agent with SQL, RAG, both-agent, and unsupported routes
+- Source citations for policy answers
+- Role-based access control demo for patient-table columns
+- Feedback buttons for each answer
+- Query logs and validation metrics
+- Automated tests for agents and SQL safety
 
-## Quick Start
+## Tech Stack
 
-```powershell
-cd C:\Users\Priyal\Desktop\DS_intern
-pip install -r requirements.txt
-python scripts\prepare_data.py --archive "C:\Users\Priyal\Downloads_new\archive (1).zip"
-python -m streamlit run app.py
-```
-
-Then open:
-
-```text
-http://localhost:8501
-```
+- Python
+- SQLite
+- Pandas
+- Scikit-learn
+- Pytest
 
 ## Project Structure
 
@@ -38,7 +41,6 @@ DS_intern/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── .env
 ├── data/
 │   ├── healthcare_dataset.csv
 │   ├── hospital.db
@@ -65,7 +67,8 @@ DS_intern/
 ├── frontend/
 │   └── ui.py
 ├── tests/
-└── evaluation/
+├── evaluation/
+└── docs/
 ```
 
 ## Architecture
@@ -85,28 +88,49 @@ Orchestrator Agent
     +--> Unsupported response for out-of-scope questions
     |
     v
-Unified Response + Query Log + Evaluation Metrics
+Unified Response + Query Log + Feedback + Validation Metrics
 ```
 
-## Features
+## How to Run Locally
 
-- CSV-to-SQLite conversion
-- Data cleaning, date conversion, duplicate removal, missing-value checks
-- Patient ID generation
-- SQLite indexes on condition, doctor, hospital, admission date, admission type, and test results
-- 10 synthetic hospital policy documents
-- Hybrid query classifier: keyword rules plus semantic similarity
-- SQL, RAG, both-agent, and unsupported routes
-- Read-only SQL validation
-- Maximum returned rows
-- Empty-result and database-error handling
-- Limited conversational memory for follow-up questions
-- Query logs in `logs/query_logs.json`
-- Automated tests
-- Evaluation metrics
-- Streamlit tabs for chat, database explorer, policy documents, metrics, evaluation, and project overview
+1. Clone the repository:
 
-## Example Questions
+```powershell
+git clone https://github.com/priyalchamaria/AI_MultiAgent_Hospital-Assistance.git
+cd AI_MultiAgent_Hospital-Assistance
+```
+
+2. Install dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+3. Prepare the data:
+
+```powershell
+python scripts\prepare_data.py --archive "C:\path\to\archive (1).zip"
+```
+
+If the CSV is already extracted, use:
+
+```powershell
+python scripts\prepare_data.py --csv "C:\path\to\healthcare_dataset.csv"
+```
+
+4. Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+5. Open the browser:
+
+```text
+http://localhost:8501
+```
+
+## Demo Questions
 
 SQL Agent:
 
@@ -118,9 +142,9 @@ SQL Agent:
 RAG Agent:
 
 - What is the visitor policy?
+- What are the visiting hours?
 - When should privacy incidents be reported?
 - What is the medication administration policy?
-- What is the emergency response procedure?
 
 Both Agents:
 
@@ -131,13 +155,17 @@ Unsupported:
 - What is the weather today?
 - DROP TABLE patients
 
-## Tests
+## Testing
+
+Run the automated test suite:
 
 ```powershell
-pytest
+python -m pytest
 ```
 
 ## Evaluation
+
+Run the evaluation script:
 
 ```powershell
 python evaluation\evaluate_system.py
