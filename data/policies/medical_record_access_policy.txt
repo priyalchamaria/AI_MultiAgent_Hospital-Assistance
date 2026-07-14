@@ -1,0 +1,24 @@
+Policy Title: Medical Record Access Policy
+Policy ID: HOSP-POL-010
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Define authorized access, release, and audit practices for medical records.
+
+Scope:
+Applies to electronic health records, archived charts, scanned documents, and release-of-information workflows.
+
+Responsibilities:
+Health information management validates releases. Staff access records only for assigned work. Compliance reviews audit exceptions.
+
+Procedure:
+Requests for medical records require identity verification and authorization unless access is for treatment, payment, operations, or required law. Audit logs are reviewed for inappropriate access.
+
+Exceptions:
+Emergency access is permitted when required for immediate patient care and must be reviewed afterward.
+
+Escalation Process:
+Unauthorized access, suspicious audit activity, or disputed release requests must be escalated to compliance.
+
+Review Date:
+2027-10-01

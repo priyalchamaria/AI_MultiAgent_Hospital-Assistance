@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2026-07-14 22:54:33",
+    "query": "What is the visitor policy?",
+    "selected_agent": "RAG Agent",
+    "rating": "Helpful",
+    "status": "success"
+  }
+]

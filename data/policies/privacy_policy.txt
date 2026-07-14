@@ -1,0 +1,24 @@
+Policy Title: Patient Privacy Policy
+Policy ID: HOSP-POL-005
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Protect patient confidentiality and ensure access to information is based on legitimate work need.
+
+Scope:
+Applies to electronic records, printed records, verbal communication, images, billing data, and audit logs.
+
+Responsibilities:
+All staff protect credentials and access only records needed for treatment, billing, operations, compliance, or approved review.
+
+Procedure:
+Staff must lock unattended workstations, avoid discussing patient details in public areas, and dispose of printed records in secure shredding bins.
+
+Exceptions:
+Disclosure may occur when required by law, patient authorization, or approved emergency response.
+
+Escalation Process:
+Suspected privacy incidents must be reported to the compliance office within 24 hours.
+
+Review Date:
+2027-05-01

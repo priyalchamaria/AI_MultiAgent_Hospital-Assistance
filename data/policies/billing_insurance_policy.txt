@@ -1,0 +1,24 @@
+Policy Title: Billing and Insurance Policy
+Policy ID: HOSP-POL-008
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Support accurate billing, insurance documentation, and transparent patient communication.
+
+Scope:
+Applies to registration, coding, billing, insurance verification, and patient financial counseling.
+
+Responsibilities:
+Billing staff validate payer information. Clinical teams document services. Finance teams audit unusual billing patterns.
+
+Procedure:
+Insurance provider, admission type, services, billing amount, and discharge date must be documented accurately. Corrections require a traceable reason.
+
+Exceptions:
+Urgent care must not be delayed while insurance details are being verified.
+
+Escalation Process:
+Coverage disputes, suspected billing errors, or repeated documentation gaps must be escalated to the billing supervisor.
+
+Review Date:
+2027-08-01

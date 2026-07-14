@@ -1,0 +1,24 @@
+Policy Title: Incident Reporting Policy
+Policy ID: HOSP-POL-009
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Ensure safety events, near misses, privacy concerns, and operational incidents are reported and reviewed.
+
+Scope:
+Applies to clinical incidents, visitor incidents, medication events, falls, equipment failures, and privacy concerns.
+
+Responsibilities:
+Any staff member who observes an incident must report it. Managers review reports and assign corrective actions.
+
+Procedure:
+Incidents should be entered in the incident reporting system before the end of the shift. Reports must include date, location, involved parties, description, immediate actions, and witnesses.
+
+Exceptions:
+Immediate patient safety actions should occur before report entry.
+
+Escalation Process:
+Severe harm, legal risk, media risk, or repeated safety events escalate to risk management and department leadership.
+
+Review Date:
+2027-09-01

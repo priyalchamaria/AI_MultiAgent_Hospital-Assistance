@@ -1,0 +1,24 @@
+Policy Title: Discharge Policy
+Policy ID: HOSP-POL-003
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Ensure patients leave with safe instructions, medication guidance, and follow-up planning.
+
+Scope:
+Applies to all discharged inpatients and observation patients.
+
+Responsibilities:
+Clinicians complete discharge summaries. Nurses review instructions. Case management supports high-risk discharge needs.
+
+Procedure:
+Discharge planning begins at admission. Before discharge, staff verify diagnosis, medication changes, pending tests, follow-up appointments, transport, and home-care needs.
+
+Exceptions:
+Patients leaving against medical advice must receive risk counseling and available written instructions.
+
+Escalation Process:
+If a patient lacks a safe home environment, medication access, or required equipment, staff must escalate to case management before discharge.
+
+Review Date:
+2027-03-01

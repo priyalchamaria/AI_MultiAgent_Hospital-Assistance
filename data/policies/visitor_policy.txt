@@ -1,0 +1,24 @@
+Policy Title: Visitor Policy
+Policy ID: HOSP-POL-001
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Define safe visitor access while protecting patient rest, privacy, and clinical operations.
+
+Scope:
+Applies to inpatient units, outpatient treatment areas, emergency waiting zones, and visitor registration desks.
+
+Responsibilities:
+Security verifies visitor identity. Nurses may limit visits based on clinical need. Unit managers review exceptions.
+
+Procedure:
+General visiting hours are 10:00 AM to 7:00 PM. A maximum of two visitors may be present per patient unless an exception is approved. Visitors must wear identification badges and follow infection-control instructions.
+
+Exceptions:
+End-of-life care, pediatric guardians, disability support persons, and approved interpreters may receive extended access.
+
+Escalation Process:
+Disruptive visitors are escalated to the charge nurse and security. Safety threats are escalated immediately to hospital security leadership.
+
+Review Date:
+2027-01-15

@@ -1,0 +1,24 @@
+Policy Title: Emergency Response Policy
+Policy ID: HOSP-POL-006
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Provide a coordinated response to clinical emergencies, facility threats, and mass-casualty events.
+
+Scope:
+Applies to all hospital departments, contractors, and visitors during emergency events.
+
+Responsibilities:
+Staff activate the correct emergency code, protect patients, follow command instructions, and document actions after stabilization.
+
+Procedure:
+Emergency response begins with immediate safety assessment, activation of the emergency code, notification of the response team, patient protection, and event documentation.
+
+Exceptions:
+Departments may adapt procedures when local conditions make the standard route unsafe.
+
+Escalation Process:
+Uncontrolled hazards, mass-casualty incidents, or failed communication systems escalate to the incident command leader.
+
+Review Date:
+2027-06-01

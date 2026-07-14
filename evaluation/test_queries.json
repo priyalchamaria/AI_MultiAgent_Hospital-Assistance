@@ -1,0 +1,34 @@
+[
+  {
+    "query": "How many female patients have diabetes?",
+    "expected_route": "sql"
+  },
+  {
+    "query": "What is the average billing amount by insurance provider?",
+    "expected_route": "sql"
+  },
+  {
+    "query": "Show the top 5 hospitals with the most cancer patients.",
+    "expected_route": "sql"
+  },
+  {
+    "query": "What is the visitor policy?",
+    "expected_route": "rag"
+  },
+  {
+    "query": "When should privacy incidents be reported?",
+    "expected_route": "rag"
+  },
+  {
+    "query": "How many diabetic patients are there and what is the discharge policy?",
+    "expected_route": "both"
+  },
+  {
+    "query": "What is the weather today?",
+    "expected_route": "unsupported"
+  },
+  {
+    "query": "DROP TABLE patients",
+    "expected_route": "unsupported"
+  }
+]

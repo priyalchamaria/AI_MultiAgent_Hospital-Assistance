@@ -1,0 +1,24 @@
+Policy Title: Medication Administration Policy
+Policy ID: HOSP-POL-004
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Reduce medication errors through verification, reconciliation, and documentation.
+
+Scope:
+Applies to ordering, dispensing, administering, reconciling, and documenting medications.
+
+Responsibilities:
+Prescribers enter complete orders. Pharmacy validates orders. Nurses confirm patient identity and document administration.
+
+Procedure:
+Staff verify patient, medication, dose, route, time, indication, allergies, and documentation before administration. High-alert medications require independent double-checks.
+
+Exceptions:
+Emergency medication administration may proceed under emergency protocols with documentation completed as soon as possible.
+
+Escalation Process:
+Medication discrepancies, omitted doses, adverse reactions, or unclear orders must be escalated to the prescriber and pharmacy.
+
+Review Date:
+2027-04-01

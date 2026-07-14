@@ -1,0 +1,24 @@
+Policy Title: Admission Policy
+Policy ID: HOSP-POL-002
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Ensure every admission has accurate identity, clinical, insurance, and consent documentation.
+
+Scope:
+Applies to elective, urgent, and emergency admissions.
+
+Responsibilities:
+Registration staff collect demographics and insurance details. Clinical staff verify admission type, initial diagnosis, allergies, and care priority.
+
+Procedure:
+At admission, staff confirm patient identity using two identifiers, capture demographic information, record admission type, assign room when available, and notify the responsible clinician.
+
+Exceptions:
+Emergency stabilization may occur before full registration when delaying care would create risk.
+
+Escalation Process:
+Identity conflicts, missing consent, or unsafe room placement must be escalated to the admission supervisor.
+
+Review Date:
+2027-02-01

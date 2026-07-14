@@ -1,0 +1,24 @@
+Policy Title: Infection Control Policy
+Policy ID: HOSP-POL-007
+Notice: Synthetic academic policy. This document is generated for internship project demonstration only.
+
+Purpose:
+Minimize healthcare-associated infections among patients, visitors, and staff.
+
+Scope:
+Applies to patient-care areas, shared equipment, isolation rooms, procedure areas, and staff workspaces.
+
+Responsibilities:
+All staff perform hand hygiene. Department leaders monitor compliance. Infection prevention staff audit and coach teams.
+
+Procedure:
+Hand hygiene is required before and after patient contact, after exposure to bodily fluids, after removing gloves, and before clean procedures. Shared equipment must be disinfected between patients.
+
+Exceptions:
+Emergency care may begin before full isolation setup if delay would endanger the patient.
+
+Escalation Process:
+Suspected outbreaks or repeated non-compliance must be escalated to infection prevention leadership.
+
+Review Date:
+2027-07-01
