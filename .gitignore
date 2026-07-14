@@ -4,3 +4,6 @@ __pycache__/
 .streamlit/secrets.toml
 logs/query_logs.json
 streamlit.*.log
+docs/*.docx
+docs/~$*.docx
+docs/report_assets/
